@@ -20,23 +20,23 @@ i586-elf-ld -T linker.ld -o kernel.bin loader.o kernel.o
 ```
 
 ## 4. Create pad file
-´´´
+```
 del pad
 fsutil file createnew pad 750
-´´´
+```
 
 ## 5. Create floppy image
-´´´
+```
 copy \b stage1+stage2+pad+kernel.bin floppy.img
-´´´
+```
 
 ## 6. Run Bochs
-´´´
+```
 bochs.lnk
-´´´
+```
 
 ## 7. In Bochs:
-´´´
+```
 kernel 200+18
 boot
-´´´
+```
